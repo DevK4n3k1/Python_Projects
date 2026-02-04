@@ -9,6 +9,7 @@ def main():
         print("0) Quit")
 
         choice = input("\nChoose an option: ")
+        choice2 = input("Choose an option: ")
 
         if choice == "1":
             item = input("Enter an item to add: ")
