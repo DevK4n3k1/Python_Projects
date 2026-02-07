@@ -1,7 +1,7 @@
 def main():
     print("=== Shopping List App ===")
     shopping_list = []
-
+# adding a comment for push
     while True:
         print("\n--- Menu ---")
         print("1) Add item")
