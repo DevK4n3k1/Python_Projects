@@ -32,6 +32,17 @@ def main():
             print("Invalid choice. Please try again.")
 
 
+# fix this later
+
+                while True:
+        print("\n--- Menu ---")
+        print("1) Add item")
+        print("2) View list")
+        print("3) Remove item")
+        print("0) Quit")
+
+# here
+
 
 
 if __name__ == "__main__":
