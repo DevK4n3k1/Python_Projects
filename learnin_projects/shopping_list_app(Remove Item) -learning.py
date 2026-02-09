@@ -1,15 +1,15 @@
 def main():
     print("=== Shopping List App ===")
     shopping_list = []
-# adding a comment for push
+
     while True:
         print("\n--- Menu ---")
         print("1) Add item")
         print("2) View list")
+        print("3) Remove item")
         print("0) Quit")
 
-        choice = input("\nChoose an option: ")
-        choice2 = input("Choose an option: ")
+        choice = input("Choose an option: ")
 
         if choice == "1":
             item = input("Enter an item to add: ")
@@ -20,9 +20,20 @@ def main():
             if len(shopping_list) == 0:
                 print("Your shopping list is empty.")
             else:
-                print("\n\nYour shopping list:")
+                print("Your shopping list:")
                 for i in range(len(shopping_list)):
                     print(str(i + 1) + ". " + shopping_list[i])
+
+        elif choice == "3":
+            if len(shopping_list) == 0:
+                print("Your list is empty. Nothing to remove.")
+            else:
+                item = input("Enter the item to remove: ")
+                if item in shopping_list:
+                    shopping_list.remove(item)
+                    print(item, "removed from the list.")
+                else:
+                    print(item, "not found in the list.")
 
         elif choice == "0":
             print("Goodbye!")
@@ -31,28 +42,5 @@ def main():
         else:
             print("Invalid choice. Please try again.")
 
-
-# fix this later
-
-                while True:
-        print("\n--- Menu ---")
-        print("1) Add item")
-        print("2) View list")
-        print("3) Remove item")
-        print("0) Quit")
-
-            while True:
-        print("\n--- Menu ---")
-        print("1) Add item")
-        print("2) View list")
-        print("3) Remove item")
-        print("0) Quit")
-
-
-# here
-
-
-
 if __name__ == "__main__":
     main()
-
