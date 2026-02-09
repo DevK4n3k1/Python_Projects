@@ -41,6 +41,14 @@ def main():
         print("3) Remove item")
         print("0) Quit")
 
+            while True:
+        print("\n--- Menu ---")
+        print("1) Add item")
+        print("2) View list")
+        print("3) Remove item")
+        print("0) Quit")
+
+
 # here
 
 
