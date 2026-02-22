@@ -21,6 +21,19 @@ def main():
     else:
        print("Invalid choice, Please select 1-4.")
 
+ while True:
+        print("\nOptions:")
+        print("1. Add item")
+        print("2. Remove item")
+        print("3. View inventory")
+        print("4. Quit")
+
+         while True:
+        print("\nOptions:")
+        print("1. Add item")
+        print("2. Remove item")
+        print("3. View inventory")
+        print("4. Quit")
 
    
    while True:
