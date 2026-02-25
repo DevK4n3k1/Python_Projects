@@ -19,13 +19,30 @@ def main():
                print("Quantity must be a number.")   
                continue
 
-            qty = int(qty)             
+            qty = int(qty)
 
-        elif choice == "2":
-            print("Remove item logic here")
+            if item in inventory:
+                inventory[item] += qty
+                print(f"Updated {item}, new quantity {qty}")
+            else:
+                inventory[item] = qty
+                print(f"Added {item} with quantity {qty}")             
+
+        elif choice == "2":            
+            item = input("Enter item name to remove: ").strip().lower()
+            if item in inventory:
+                del inventory[item]
+                print(f"Removed {item} from inventory.")
+            else:
+                print("Item not found")
 
         elif choice == "3":
-            print("View inventory logic here")
+            if not inventory:
+               print("Inventory is empty.")
+            else:
+                print("\n--- Current Inventory ---")
+                for item, qty in inventory.items():
+                    print(f"- {item}: {qty}")
 
         elif choice == "4":
             print("Goodbye!")
