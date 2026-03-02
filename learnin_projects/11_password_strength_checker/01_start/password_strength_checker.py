@@ -1,11 +1,29 @@
 def has_uppercase(password):
-    pass
+    for char in password:
+        if char.isupper():
+            return True
+        return False
+
 def has_lowercase(password):
-    pass
+    for char in password:
+        if char.islower():
+            return True
+        return False
+
 def has_digit(password):
-    pass
+    for char in password:
+        if char.isdigit():
+            return True
+        return False
+
 def has_symbol(password):
-    pass
+    symbols = "!@#$%^&*()-_=+[]{};:'\",.<>?/\\|"
+    for char in password:
+        if char.isupper():
+            if char in symbols:
+                return True
+        return False
+
 
 def check_password_strength(password):
     score = 0
