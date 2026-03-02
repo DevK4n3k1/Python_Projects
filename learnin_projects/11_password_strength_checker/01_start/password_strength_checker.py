@@ -30,26 +30,43 @@ def check_password_strength(password):
     feedback = []
 
     if len(password) >= 8:          # score + 1 or feedback
-        pass
+        score += 1
+    else:
+        feedback.append("Use at least 8 characters")
+    
     if has_uppercase(password):
-        pass
+        score += 1
+    else:
+        feedback.append("Use at least 1 uppercase latter")
+
     if has_lowercase(password):
-        pass
+        score += 1            
+    else:
+        feedback.append("Use at least 1 lowercase latter")
+
     if has_digit(password):
-        pass
+            score += 1
+    else:
+        feedback.append("Use at least 1 diggit")
+
     if has_symbol(password):
-        pass
+            score += 1
+    else:
+        feedback.append("Use at least 1 number")
+
 
     return score, feedback
 
 def main():
     print("=== Password Strength Checker ===")
-    
+
     while True:
         password = input("\nEnter your password: ")
+
         score, feedback = check_password_strength(password)
 
         print("\nPassword Strength Result:")
+
         if score <= 2:
             print("❌ Weak")
         elif score <= 4:
@@ -57,8 +74,12 @@ def main():
         else:
             print("✅ Strong")
 
-        print("\nSuggestions to improve your password:")
-        # feedback
+        if feedback:
+            print("\nSuggestions to improve your password:")
+            for tip in feedback:
+                print("-", tip)
+        else:
+            print("\nGreat job! Your password is strong.")
 
         choice = input("\nCheck another password? (y/n): ").lower()
         if choice != "y":
@@ -67,4 +88,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
