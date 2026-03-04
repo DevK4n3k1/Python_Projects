@@ -1,8 +1,9 @@
 class Contact:
     def __init__(self, name, phone, email):
-        # store contact attributes gere
-        print("Initialize contact here")
-    
+        self.name = name
+        self.phone = phone
+        self.email = email
+            
     def show_info(self):
         # display contact0s information
         print("Show contact info here")
