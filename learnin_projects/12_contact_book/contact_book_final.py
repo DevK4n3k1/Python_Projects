@@ -5,12 +5,11 @@ class Contact:
         self.email = email
             
     def show_info(self):
-        # display contact0s information
-        print("Show contact info here")
+        print(f"Name: {self.name}, Phone: {self.phone}, Email: {self.email}")
 
 def main():
     print("=== Contact Book ===")
-    contact = [] # list to store Contact objects Later
+    contacts = [] # list to store Contact objects Later
     
     while True:
         print("\nOptions:")
@@ -23,7 +22,13 @@ def main():
         choice = input("Enter 1-5: ")
 
         if choice == "1":
-            print("Add contact logic here")
+            name = input("Enter name: ").strip()
+            phone = input("Enter phone number: ").strip()
+            email = input("Enter email: ").strip()
+            contact = Contact(name, phone, email)
+            contacts.append(contact)
+            print(f"Contact for {name} added.")
+
         elif choice == "2":
             print("View all contacts logic here")
         elif choice == "3":
