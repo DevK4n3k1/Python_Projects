@@ -30,7 +30,12 @@ def main():
             print(f"Contact for {name} added.")
 
         elif choice == "2":
-            print("View all contacts logic here")
+            if not contacts:
+                print("No contacts found.")
+            else:
+                print("\n --- All Contacts ---")
+                for c in contacts:
+                    c.show_info()
         elif choice == "3":
             print("Search contact logic here")
         elif choice == "4":
