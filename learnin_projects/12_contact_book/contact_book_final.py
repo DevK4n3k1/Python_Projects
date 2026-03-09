@@ -36,8 +36,18 @@ def main():
                 print("\n --- All Contacts ---")
                 for c in contacts:
                     c.show_info()
+        
         elif choice == "3":
-            print("Search contact logic here")
+            search_name = input("Enter name to search: ").strip().lower()
+            found = False
+            for c in contacts:
+                if c.name.lower() == search_name:
+                    c.show_info()
+                    found = True
+            if not found:
+                print("Contact not found")
+
+
         elif choice == "4":
             print("Delete contact logic here")
         elif choice == "5":
