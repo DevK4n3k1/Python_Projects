@@ -47,9 +47,16 @@ def main():
             if not found:
                 print("Contact not found")
 
-
         elif choice == "4":
-            print("Delete contact logic here")
+            del_name = input("Enter the name to dele: ").strip().lower()
+            for c in contacts:
+                if c.name.lower() == del_name:
+                    contacts.remove(c)
+                    print(f"Contact {c.name} deleted.")
+                    break
+            else:
+                print("Contact not found")
+                
         elif choice == "5":
             print("Goodbye!")
             break
